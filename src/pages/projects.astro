@@ -1,0 +1,45 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout title="Projects">
+  <h2><a href="/">Home</a></h2>
+
+  <div class="container">
+    <p>Objektorientert programmering (INF101) - 2048 (April 2024):</p>
+    <a href="https://youtu.be/OZbWxmrUGqw" target="_blank">Youtube</a>
+    <p></p>
+    <a href="https://github.com/martinstyve/2048game" target="_blank"> Github</a>
+  </div>
+
+  <div class="container">
+    <p>Objektorientert programmering (INF101) - Tetris (March 2024):</p>
+    <a href="https://youtu.be/PQyhAXw5mpw" target="_blank">Youtube</a>
+  </div>
+
+  <div class="container">
+    <p>Innføring programmering (INF100) - Snake (October 2023):</p>
+    <a href="https://youtu.be/4XtJXwVUjOk" target="_blank">Youtube</a>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  h2 a {
+    color: #4D90FE; /* Light blue for Home link */
+    text-decoration: none;
+  }
+  a {
+    color: #5DD5FF; /* Lighter blue for unvisited links */
+    text-decoration: none;
+  }
+  a:visited {
+    color: #9AC8E2; /* Muted cyan for visited links */
+  }
+  a:hover {
+    color: #96F7FF; /* Brighter color for hover state */
+  }
+</style>
