@@ -11,7 +11,7 @@
 </nav>
 
 <style>
-  nav {
+  /* nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,5 +28,33 @@
 
   a:hover {
     color: #4D90FE;
-  }
+  } */
+  nav {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  padding: 1rem;
+  background: #949090ba;
+}
+
+nav::-webkit-scrollbar {
+  height: 8px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px; 
+}
+
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 0.5rem;
+  white-space: nowrap; 
+}
+
+a:hover {
+  color: #4D90FE;
+}
+
 </style>
