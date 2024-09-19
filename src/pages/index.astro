@@ -32,9 +32,16 @@ import Layout from "../components/Layout.astro";
     color: #f1f1f1;
   }
   img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+  img {
+    max-width: 100%;
+    margin-top: 1rem;
   }
+}
 </style>
