@@ -8,20 +8,19 @@ import Layout from "../components/Layout.astro";
     <p>
       I am from Nittedal in Norway, currently studying Informatics: Computer Technology in Bergen.
       <p></p>
-
       Here are some photos that capture my journey and experiences.
     </p>
   </div>
-  <div class="/gallery">
-    <img src="/gallery/1.jpg" alt="Description 1" class="/gallery-item" />
-    <img src="/gallery/2.jpg" alt="Description 2" class="/gallery-item" />
-    <img src="/gallery/3.jpg" alt="Description 3" class="/gallery-item" />
-    <img src="/gallery/4.jpg" alt="Description 4" class="/gallery-item" />
-    <img src="/gallery/5.jpg" alt="Description 5" class="/gallery-item" />
-    <img src="/gallery/6.jpg" alt="Description 6" class="/gallery-item" />
-    <img src="/gallery/7.jpg" alt="Description 7" class="/gallery-item" />
-    <img src="/gallery/8.jpg" alt="Description 8" class="/gallery-item" />
-    <img src="/gallery/9.jpg" alt="Description 9" class="/gallery-item" />
+  <div class="gallery"> <!-- Fixed class name -->
+    <img src="gallery/1.jpg" alt="Description 1" class="gallery-item" />
+    <img src="gallery/2.jpg" alt="Description 2" class="gallery-item" />
+    <img src="gallery/3.jpg" alt="Description 3" class="gallery-item" />
+    <img src="gallery/4.jpg" alt="Description 4" class="gallery-item" />
+    <img src="gallery/5.jpg" alt="Description 5" class="gallery-item" />
+    <img src="gallery/6.jpg" alt="Description 6" class="gallery-item" />
+    <img src="gallery/7.jpg" alt="Description 7" class="gallery-item" />
+    <img src="gallery/8.jpg" alt="Description 8" class="gallery-item" />
+    <img src="gallery/9.jpg" alt="Description 9" class="gallery-item" />
   </div>
 </Layout>
 
@@ -29,10 +28,11 @@ import Layout from "../components/Layout.astro";
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
     gap: 1rem; /* Spacing between images */
     padding: 2rem;
     max-width: 900px; /* Limit the width */
-    margin: auto; /* Center the /gallery */
+    margin: auto; /* Center the gallery */
   }
 
   .gallery-item {
