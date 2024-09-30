@@ -1,36 +1,33 @@
-name: Deploy Astro Website
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's different
-  workflow_dispatch: # Allows manual trigger from GitHub Actions
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2.5.0  # Explicit version instead of @v3
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3.6.0  # Explicit version instead of @v3
+        uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Use Node.js 20.x
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build project
         run: npm run build
 
-      - name: Set Git user
+      - name: Configure Git
         run: |
-          git config --global user.email "martin.styve@icloud.com"
           git config --global user.name "martinstyve"
+          git config --global user.email "martin.styve@icloud.com"
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required for authentication
