@@ -12,18 +12,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v2.5.0  # Explicit version instead of @v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3.6.0  # Explicit version instead of @v3
         with:
-          node-version: '22'
+          node-version: '20'  # Use Node.js 20.x
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
+
+      - name: Set Git user
+        run: |
+          git config --global user.email "martin.styve@icloud.com"
+          git config --global user.name "martinstyve"
 
       - name: Deploy
         run: npm run deploy
