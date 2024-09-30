@@ -1,0 +1,81 @@
+---
+import Layout from "../../components/Layout.astro";
+---
+
+<Layout title="2048 Game">
+  <section class="project-section">
+    <h1>Snake</h1>
+    <p>Objektorientert programmering (INF101)</p>
+    <p>April 2024</p>
+    <img src="/project_photos/snake_photo.jpg" alt="2048 Game Screenshot" class="large-project-image" />
+    <div class="project-description">
+      <p>Built in intro to programming to learn fundamentals :)</p>
+    </div>
+    <div class="project-links">
+      <a href="https://youtu.be/4XtJXwVUjOk" target="_blank">
+        <img src="/logos/yt_logo_text.png" alt="Youtube Demo" class="logo-link" />
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .project-section {
+    padding: 4rem 1rem;
+    background-color: #1e1e24;
+    color: #f1f1f1;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #5DD5FF;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #c4c4c4;
+    margin-bottom: 1rem;
+  }
+
+  .large-project-image {
+    width: 100%; 
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px; 
+    margin-bottom: 2rem; 
+  }
+
+  .project-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the logos */
+  }
+
+  .logo-link {
+    width: 80px; /* Adjust the logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-link:hover {
+    filter: opacity(0.8) drop-shadow(0 0 10px #5DD5FF);
+    transform: scale(1.1); /* Scale up the logo on hover */
+  }
+
+  @media (max-width: 768px) {
+    .large-project-image {
+      max-width: 100%; /* Allow the image to be responsive */
+    }
+
+    .project-section {
+      padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+  }
+</style>
